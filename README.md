@@ -2,6 +2,9 @@
 The project constructs communication channels based on sensing channels
 ### System Model ####
 In an ISAC system, there are two TRXs with identical mono-static sensing capacities, each of which serves as Tx or Rx in the communication process.
+sensing channel1: $h_{T} = \sum_{p=1}^{P} \alpha_p \exp(-j 2\pi f_c \tau_p) \delta(\tau-\tau_p) \delta(\phi_{\rm AOD}-\phi_p)$, 
+sensing channel2: $h_{R} = \sum_{k=1}^{K} \beta_k \exp(-j 2\pi f_c \tau_k) \delta(\tau-\tau_k) \delta(\phi_{\rm AOA}-\phi_k)$, 
+constructing communication channel:  $h(\tau,\psi, \varphi) = \sum_{i=1}^{C} \eta_i \exp(-j 2\pi f_c \tau_i) \delta(\tau-\tau_i) \delta(\psi-\psi_i)\delta(\varphi-\varphi_i)$.
 ### Parameters ###
 For the simulation, we can change various system parameters to obtain distinct channel characteristics. 
 1. Geometry parameters include the distance between Tx and Rx, the sensing circles and communication ellipse are determined by the carrier/frequency spacing $\Delta f$.
